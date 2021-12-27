@@ -4,6 +4,7 @@ var piros = 0;
 var sarga = 0;
 var zold = 0;
 var narancs = 0;
+var nyert = 0;
 //#endregion
 
 //#region kek
@@ -76,6 +77,28 @@ function pluszkek(){
         $("#" + kek).attr("src","mezokeknarancs.png");
     } else {
         $("#" + kek).attr("src","mezokek.png");
+    }
+
+    if (kek == 36) {
+        document.getElementById("pluszkek").disabled = true;
+        document.getElementById("minuszkek").disabled = true;
+        setTimeout(function(){
+            if (nyert == 0) {
+                alert("A kék játékos nyert!");
+                nyert++;
+            } else if (nyert == 1){
+                alert("A kék játékos lett a 2. helyezett!");
+                nyert++;
+            } else if (nyert == 2){
+                alert("A kék játékos lett a 3. helyezett!");
+                nyert++;
+            } else if (nyert == 3){
+                alert("A kék játékos lett a 4. helyezett!");
+                nyert++;
+            } else {
+                alert("A kék játékos lett az 5. helyezett!");
+            }
+        }, 200);
     }
 }
 
@@ -223,6 +246,28 @@ function pluszpiros(){
     } else {
         $("#" + piros).attr("src","mezopiros.png");
     }
+
+    if (piros == 36) {
+        document.getElementById("pluszpiros").disabled = true;
+        document.getElementById("minuszpiros").disabled = true;
+        setTimeout(function(){
+            if (nyert == 0) {
+                alert("A piros játékos nyert!");
+                nyert++;
+            } else if (nyert == 1){
+                alert("A piros játékos lett a 2. helyezett!");
+                nyert++;
+            } else if (nyert == 2){
+                alert("A piros játékos lett a 3. helyezett!");
+                nyert++;
+            } else if (nyert == 3){
+                alert("A piros játékos lett a 4. helyezett!");
+                nyert++;
+            } else{
+                alert("A piros játékos lett az 5. helyezett!");
+            }
+        }, 200);
+    }
 }
 
 function minuszpiros(){
@@ -368,6 +413,28 @@ function pluszsarga(){
         $("#" + sarga).attr("src","mezosarganarancs.png");
     } else {
         $("#" + sarga).attr("src","mezosarga.png");
+    }
+
+    if (sarga == 36) {
+        document.getElementById("pluszsarga").disabled = true;
+        document.getElementById("minuszsarga").disabled = true;
+        setTimeout(function(){
+            if (nyert == 0) {
+                alert("A sárga játékos nyert!");
+                nyert++;
+            } else if (nyert == 1){
+                alert("A sárga játékos lett a 2. helyezett!");
+                nyert++;
+            } else if (nyert == 2){
+                alert("A sárga játékos lett a 3. helyezett!");
+                nyert++;
+            } else if (nyert == 3){
+                alert("A sárga játékos lett a 4. helyezett!");
+                nyert++;
+            } else{
+                alert("A sárga játékos lett az 5. helyezett!");
+            }
+        }, 200);
     }
 }
 
@@ -515,6 +582,28 @@ function pluszzold(){
     } else {
         $("#" + zold).attr("src","mezozold.png");
     }
+
+    if (zold == 36) {
+        document.getElementById("pluszzold").disabled = true;
+        document.getElementById("minuszzold").disabled = true;
+        setTimeout(function(){
+            if (nyert == 0) {
+                alert("A zöld játékos nyert!");
+                nyert++;
+            } else if (nyert == 1){
+                alert("A zöld játékos lett a 2. helyezett!");
+                nyert++;
+            } else if (nyert == 2){
+                alert("A zöld játékos lett a 3. helyezett!");
+                nyert++;
+            } else if (nyert == 3){
+                alert("A zöld játékos lett a 4. helyezett!");
+                nyert++;
+            } else{
+                alert("A zöld játékos lett az 5. helyezett!");
+            }
+        }, 200);
+    }
 }
 
 function minuszzold(){
@@ -611,9 +700,9 @@ function plusznarancs(){
     } else if (piros == narancs && sarga == narancs){
         $("#" + narancs).attr("src","mezopirossarga.png");
     } else if (piros == narancs && zold == narancs){
-        $("#" + narancs).attr("src","mezopirosnarancs.png");
+        $("#" + narancs).attr("src","mezopiroszold.png");
     } else if (sarga == narancs && zold == narancs){
-        $("#" + narancs).attr("src","mezosarganarancs.png");
+        $("#" + narancs).attr("src","mezosargazold.png");
     } else if (kek == narancs){
         $("#" + narancs).attr("src","mezokek.png");
     } else if (piros == narancs){
@@ -647,9 +736,9 @@ function plusznarancs(){
     } else if (piros == narancs && sarga == narancs){
         $("#" + narancs).attr("src","mezopirossarganarancs.png");
     } else if (piros == narancs && zold == narancs){
-        $("#" + narancs).attr("src","mezopirosnarancsnarancs.png");
+        $("#" + narancs).attr("src","mezopiroszoldnarancs.png");
     } else if (sarga == narancs && zold == narancs){
-        $("#" + narancs).attr("src","mezosarganarancsnarancs.png");
+        $("#" + narancs).attr("src","mezosargazoldnarancs.png");
     } else if (kek == narancs){
         $("#" + narancs).attr("src","mezokeknarancs.png");
     } else if (piros == narancs){
@@ -660,6 +749,28 @@ function plusznarancs(){
         $("#" + narancs).attr("src","mezozoldnarancs.png");
     } else {
         $("#" + narancs).attr("src","mezonarancs.png");
+    }
+
+    if (zold == 36) {
+        document.getElementById("plusznarancs").disabled = true;
+        document.getElementById("minusznarancs").disabled = true;
+        setTimeout(function(){
+            if (nyert == 0) {
+                alert("A Narancs játékos nyert!");
+                nyert++;
+            } else if (nyert == 1){
+                alert("A Narancs játékos lett a 2. helyezett!");
+                nyert++;
+            } else if (nyert == 2){
+                alert("A Narancs játékos lett a 3. helyezett!");
+                nyert++;
+            } else if (nyert == 3){
+                alert("A Narancs játékos lett a 4. helyezett!");
+                nyert++;
+            } else{
+                alert("A Narancs játékos lett az 5. helyezett!");
+            }
+        }, 200);
     }
 }
 
